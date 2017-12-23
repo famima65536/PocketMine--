@@ -1,5 +1,5 @@
 ## ParseError syntax error
-### 例
+### 例 - セミコロン忘れ
 ```c
 public function onLoad() {
   $this->getLogger()->info("起動しました")
@@ -22,5 +22,6 @@ public function onLoad() {
   $this->getLogger()->info("起動しました");
 }
 ```
-
+このように文法のエラーであるsyntax errorは行の前後に問題があることが多いです。  
+ほかの例も見てみましょう。  
 執筆中...
