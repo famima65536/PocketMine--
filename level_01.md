@@ -1,5 +1,5 @@
 ## ParseError syntax error
-### 例 - セミコロン忘れ
+### セミコロン忘れ
 ```c
 public function onLoad() {
   $this->getLogger()->info("起動しました")
@@ -24,4 +24,22 @@ public function onLoad() {
 ```
 このように文法のエラーであるsyntax errorは行の前後に問題があることが多いです。  
 ほかの例も見てみましょう。  
-執筆中...
+
+### 括弧の閉じ忘れ
+```c
+public function onLoad() {
+  $this->getLogger()->info("起動しました";
+}
+```  
+結果  
+`ParseError: "syntax error, unexpected ';', expecting ',' or ')'" (EXCEPTION) in "ChatChannel/src/famima65536/chatchannel/Main" at line 2`  
+
+この二回でわかった人もいるかもしれませんがsyntax errorは問題の場所の次の文字で発生することが多いです。  
+この場合は括弧)を閉じ忘れています。  
+
+修正後のコード
+```c
+public function onLoad() {
+  $this->getLogger()->info("起動しました");
+}
+```  
