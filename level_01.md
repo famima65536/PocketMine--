@@ -1,6 +1,6 @@
 # このページの説明
-このページでは以下のエラーの対処法を掲載中です
-[syntax error](#pos1)
+このページでは以下のエラーの対処法を掲載中です  
+[syntax error](#pos1)  
 ## <a name ="pos1">ParseError syntax error</a>
 ### セミコロン忘れ
 ```c
